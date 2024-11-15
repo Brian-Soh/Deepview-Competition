@@ -11,10 +11,10 @@ Data Preprocessing:
 
 **Model:**
 - REQUIREMENT: Must run this line of code in your bash terminal: set PYTHONUTF8=1
+- NOTE: We faced obstacles in training our model as it demands significant computational resources to train, hence we have attached a "reduced version" which serves as a proof of concept for our pipeline. This Reduced Model was only trained off of one ultrasonic scan and one mesh. Expectedly, it lacks accuracy but still generates a mesh.
 - In the Model Notebook we created our model which uses recurrent residual blocks with downsampling and upsampling. We used the binary cross-entropy loss function and the Adam optimizer which are standard for binary classification tasks.
 - Our output layer uses a signoid activation function to prodduce a binary mask output which we rebuild into a PLY mesh.
 - The notebook takes all .npy files the train_x and train_y folders and reshapes them to include a channel dimension and begins running 25 epochs.
-
   
 **Use Model**
 - In the Use Model Notebook, we included a similar preprocessing one for preparing the training ultrasound files.
