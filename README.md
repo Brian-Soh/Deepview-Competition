@@ -6,6 +6,7 @@ This repository contains the submission for Team 6 BBSD (Brian, Benyamin, Sam, a
 **Environment Setup:** 
 - In the project folder a folder named "raw_files" which will hold the ultrasound scans,  a folder named "train_x" which will hold the processed ultrasound scans, a folder named "train_mesh" which will hold the given meshes, and a folder named "train_y" which will hold the processed meshes.
 - Upload the training raw ultrasound scans into raw_files and the training meshes into train_mesh.
+
 **Data Preprocessing:**
 - In the Data Preprocessing Notebook, we could only process one ultrasound scan at a time due to computation limitations. Assign the current scan value (from 1 to 5) to the volume_id variable in the first code block. This will then create .mhd files to process the raw ultrasound scans and preprocess the data and their rotations which will be stored in train_x and train_y respectively as .npy files.
 
