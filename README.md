@@ -11,17 +11,17 @@ This repository contains the submission for Team 6 BBSD (Brian, Benyamin, Sam, a
   
 **Model Training**
 - Created and trained a Recurrent Convolutional Neural Network with 11 layers (1 input, 9 hidden, 1 output).
-- Used Batch Normalization and ReLU activation within our recurrent blocks to introduce non-linearity into our model and avoid the vanishing gradient problem.
-- Downsampling after each encoding layer and Upsampling after each encoding layer.
+- Leveraged Batch Normalization and ReLU activation within our recurrent blocks to introduce non-linearity into our model and avoid the vanishing gradient problem.
+- Used Downsampling after each encoding layer and Upsampling after each encoding layer.
 
 **Reduced Model**
-- Due to our limitations in computing capacity, we trained a reduced model to fully demonstrate our pipeline.
+- rained a reduced model to fully demonstrate our pipeline due to our limitations in computing capacity.
 - The reduced model was trained on only 1 training set and 10 epochs, hence it lacks accuracy but is still able to plot out estimations.
   
 **Prediction Output and Chamfer Distance**
-- We apply the same preprocessing to the input ultrasound scan as we did for the training set
-- Converted our predicted points into a PLY file
-- Calculated the chamfer distance between the predicted output and the correct mesh to access accuracy
+- Applied the same preprocessing to the input ultrasound scan as we did for the training set.
+- Converted our predicted points into a PLY file.
+- Calculated the chamfer distance between the predicted output and the correct mesh to access accuracy.
 
 ## Instructions
 **Environment Setup:** 
