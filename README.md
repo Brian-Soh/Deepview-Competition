@@ -1,27 +1,27 @@
 # Deepview-Competition
 
-This repository contains the submission for Team 6 BBSD (Brian, Benyamin, Sam, and Dennis) for UBC Data Science Club's Deepview Computer Vision Hackathon which was held in collaboration with Dark Vision. Due to the computational limitations of our online shared notebook, we segmented each step of our pipeline into seperate notebooks.
+This repository contains the submission for Team 6 BBSD (Brian, Benyamin, Sam, and Dennis) for UBC Data Science Club's Deepview Computer Vision Hackathon, held in collaboration with DarkVision. Due to the computational limitations of our shared online notebook, we segmented each step of our pipeline into separate notebooks.
 
 ## Pipeline: 
 **Data Preprocessing** 
 - Extracted the voxel coordinates of the given training ultrasound and mesh files.
-- Normalized our ultrasound data points.
-- Casted a binary mask on over our mesh data points.
+- Normalized the ultrasound data points.
+- Casted a binary mask to the mesh data points.
 - Sliced and resized data to be a 3D array of 256x256x1280.
   
 **Model Training**
 - Created and trained a Recurrent Convolutional Neural Network with 11 layers (1 input, 9 hidden, 1 output).
-- Leveraged Batch Normalization and ReLU activation within our recurrent blocks to introduce non-linearity into our model and avoid the vanishing gradient problem.
-- Used Downsampling after each encoding layer and Upsampling after each encoding layer.
+- Leveraged Batch Normalization and ReLU activation within the recurrent blocks to introduce non-linearity and mitigate the vanishing gradient problem.
+- Incorporated downsampling after each encoding layer and upsampling after each encoding layer.
 
 **Reduced Model**
-- rained a reduced model to fully demonstrate our pipeline due to our limitations in computing capacity.
-- The reduced model was trained on only 1 training set and 10 epochs, hence it lacks accuracy but is still able to plot out estimations.
+- Trained a reduced version of our model to demonstrate our pipeline due to computational constraints.
+- The reduced model was trained on only one training set and for 10 epochs. While it lacks accuracy, it successfully provides estimations and demonstrates our approach.
   
 **Prediction Output and Chamfer Distance**
-- Applied the same preprocessing to the input ultrasound scan as we did for the training set.
-- Converted our predicted points into a PLY file.
-- Calculated the chamfer distance between the predicted output and the correct mesh to access accuracy.
+- Applied the same preprocessing steps to the input ultrasound scan as were used for the training set.
+- Converted the predicted points into a PLY file.
+- Calculated the Chamfer Distance between the predicted output and the correct mesh to assess accuracy.
 
 ## Instructions
 **Environment Setup:** 
