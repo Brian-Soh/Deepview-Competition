@@ -10,8 +10,8 @@ This repository contains the submission for Team 6 BBSD (Brian, Benyamin, Sam, a
 - Sliced and resized data to be a 3D array of 256x256x1280.
   
 **Model Training**
-- Created and trained a Recurrent Convolutional Neural Network with 11 layers (1 input, 9 hidden, 1 output).
-- Leveraged Batch Normalization and ReLU activation within the recurrent blocks to introduce non-linearity and mitigate the vanishing gradient problem.
+- Created and trained a Recurrent Residual Convolutional Neural Network with 11 layers (1 input, 9 hidden, 1 output).
+- Leveraged Batch Normalization and ReLU activation within the recurrent residual blocks to introduce non-linearity and mitigate the vanishing gradient problem.
 - Incorporated downsampling after each encoding layer and upsampling after each encoding layer.
 
 **Reduced Model**
