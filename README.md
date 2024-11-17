@@ -1,6 +1,27 @@
 # Deepview-Competition
 
-This repository contains the submission for Team 6 BBSD (Brian, Benyamin, Sam, and Dennis) for UBC Data Science Club's Deepview Computer Vision Hackathon which was held in collaboration with Dark Vision. We have included the two notebooks we created for data preprocessing, our model, and Lisa Y. W. Tang's model from a previous iteration of the competition. For additional context, we also included the competition outline and our presentation slide deck.
+This repository contains the submission for Team 6 BBSD (Brian, Benyamin, Sam, and Dennis) for UBC Data Science Club's Deepview Computer Vision Hackathon which was held in collaboration with Dark Vision. Due to the computational limitations of our online shared notebook, we segmented each step of our pipeline into seperate notebooks.
+
+## Pipeline: 
+**Data Preprocessing** 
+- Extracted the voxel coordinates of the given training ultrasound and mesh files.
+- Normalized our ultrasound data points.
+- Casted a binary mask on over our mesh data points.
+- Sliced and resized data to be a 3D array of 256x256x1280.
+  
+**Model Training**
+- Created and trained a Recurrent Convolutional Neural Network with 11 layers (1 input, 9 hidden, 1 output).
+- Used Batch Normalization and ReLU activation within our recurrent blocks to introduce non-linearity into our model and avoid the vanishing gradient problem.
+- Downsampling after each encoding layer and Upsampling after each encoding layer.
+
+**Reduced Model**
+- Due to our limitations in computing capacity, we trained a reduced model to fully demonstrate our pipeline.
+- The reduced model was trained on only 1 training set and 10 epochs, hence it lacks accuracy but is still able to plot out estimations.
+  
+**Prediction Output and Chamfer Distance**
+- We apply the same preprocessing to the input ultrasound scan as we did for the training set
+- Converted our predicted points into a PLY file
+- Calculated the chamfer distance between the predicted output and the correct mesh to access accuracy
 
 ## Instructions
 **Environment Setup:** 
