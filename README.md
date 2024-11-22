@@ -1,4 +1,4 @@
-# Deepview-Competition
+# Surface Mesh Reconstruction Via Image Segmentation
 
 This repository contains the submission for Team 6 BBSD (Brian, Benyamin, Sam, and Dennis) for UBC Data Science Club's Deepview Computer Vision Hackathon, held in collaboration with DarkVision. Due to the computational limitations of our shared online notebook, we segmented each step of our pipeline into separate notebooks.
 
